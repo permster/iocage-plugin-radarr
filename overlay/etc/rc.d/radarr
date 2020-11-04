@@ -35,13 +35,12 @@ load_rc_config $name
 
 pidfile="${radarr_data_dir}/radarr.pid"
 command="/usr/sbin/daemon"
-procname="/usr/local/bin/mono"
-command_args="-f ${procname} /usr/local/share/Radarr/Radarr.exe --data=${radarr_data_dir} --nobrowser"
+command_args="-f /usr/local/share/Radarr/Radarr --data=${radarr_data_dir} --nobrowser"
 
 start_precmd=radarr_precmd
 radarr_precmd() {
     if [ ! -d ${radarr_data_dir} ]; then
-    install -d -o ${radarr_user} -g ${radarr_group} ${radarr_data_dir}
+        install -d -o ${radarr_user} -g ${radarr_group} ${radarr_data_dir}
     fi
 
     export XDG_CONFIG_HOME=${radarr_data_dir}
