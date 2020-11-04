@@ -7,6 +7,7 @@ rm /usr/local/share/tmp.tar.gz
 
 # Create user
 pw user add radarr -c radarr -u 352 -d /nonexistent -s /usr/bin/nologin
+mkdir /config
 chown -R radarr:radarr /usr/local/share/Radarr /config
 
 #Set write permission to be able to write plugins update

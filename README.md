@@ -1,4 +1,5 @@
 # iocage-plugin-radarr
+**NOTE:  Not currently working due to .NET Core dependancy.**
 ## Post install steps
 ### Add permissions using FreeNAS 11.3 ACL manager
 1. Click the three dots next to the media dataset; in this example, it is called "media"
